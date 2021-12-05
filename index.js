@@ -1,24 +1,14 @@
-import { ContaCorrente } from './ContaCorrente.js';
-import { ContaPoupanca } from './ContaPoupanca.js';
 import { Cliente } from './Clientes/Cliente.js';
+import { Gerente } from './Funcionarios/Gerente.js';
+import { SistemaLogin } from './Funcionarios/SistemaAutenticacao.js';
 
-const ccJoao = new ContaCorrente("1234", new Cliente("João da Silva","12345678900"));
-const ccAlice = new ContaCorrente("3214", new Cliente("Alice de Oliveira", "14725836999"));
-const cpAlfredo = new ContaPoupanca("111", new Cliente("Alfredo Dias", "12345678999"), 550);
-//const ccTeste = new Conta("1611", new Cliente("Conta Teste", "12345888999"), 550);
+const gerente = new Gerente("José da Silva", "12345678999", 1550.00);
+gerente._cadastrarSenha("xpto123");
+const gerenteLogado = (SistemaLogin.login(gerente, "xpto123"));
 
-ccJoao.depositar(500);
+const cliente = new Cliente("Maria da Silva", "45678913233");
+cliente._senha = "xpto123";
+const clienteLogado = (SistemaLogin.login(cliente, "xpto123"));
 
-ccJoao.sacar(600);
-
-ccJoao.sacar(300);
-
-ccJoao.transferir(150,ccAlice);
-
-cpAlfredo.sacar(39);
-
-console.log(ccJoao);
-console.log(ccAlice);
-console.log(cpAlfredo);
-
-console.log(ContaCorrente._numeroContas);
+console.log(gerenteLogado);
+console.log(clienteLogado);
