@@ -1,0 +1,21 @@
+{
+  "name": "alura-javascript-poo",
+  "version": "1.0.0",
+  "description": "Estudo alura",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start" : "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/estudos-valmir/alura-JavaScript-POO.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/estudos-valmir/alura-JavaScript-POO/issues"
+  },
+  "homepage": "https://github.com/estudos-valmir/alura-JavaScript-POO#readme",
+  "type": "module"
+}
