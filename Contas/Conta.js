@@ -1,7 +1,10 @@
-import { Cliente } from './Cliente.js';
+//Classe Abstrata
+import { Cliente } from '../Clientes/Cliente.js';
 export class Conta{
-
     constructor(agencia,cliente, saldo){
+
+        if(this.constructor == Conta ) throw new Error("A classe Conta é Abstrata e não deve ser instanciada");
+
         if(cliente instanceof Cliente){
             this._cliente = cliente;
             this._agencia = agencia;
@@ -10,7 +13,7 @@ export class Conta{
     }
 
     set cliente(novoCliente){
-        if(novoCliente instanceof Cliente){
+        if(novoCliente == Cliente){
             this._cliente = novoCliente;
         }
     }
