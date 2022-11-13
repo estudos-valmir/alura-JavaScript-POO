@@ -10,5 +10,9 @@ const cliente = new Cliente("Maria da Silva", "45678913233");
 cliente._senha = "xpto123";
 const clienteLogado = (SistemaLogin.login(cliente, "xpto123"));
 
+cliente.valor = 500;
+
 console.log(gerenteLogado);
 console.log(clienteLogado);
+
+console.log(cliente.#valorBonus());
